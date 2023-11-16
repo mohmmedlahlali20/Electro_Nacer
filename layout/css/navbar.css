@@ -1,0 +1,12 @@
+body{
+    background-image: none;
+    display: block;
+}
+.navbar {
+    justify-content: space-between;
+    align-items: center; /* Aligner les éléments au centre verticalement */
+}
+
+.navbar a {
+    text-decoration: none; /* Retirer la décoration du texte */
+}

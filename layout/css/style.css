@@ -1,0 +1,13 @@
+body{
+    background-size: cover;
+    background-repeat: repeat;
+    background: url(../img/imgba.jpg);
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   font-family: 'Roboto', sans-serif;
+}
+
+
+
