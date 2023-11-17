@@ -8,5 +8,5 @@
 
     <title>ELECTRO  NACER</title>
 </head>
-<body>
+<body style="overflow-x: hidden; margin-left:20px">
     <?php include './tmp/connection.php' ?>

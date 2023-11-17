@@ -4,11 +4,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $email = $_POST['email'];
   $password= $_POST['password'];
 
-  $sql = "SELECT * FROM users WHERE Email = '$email'";
+  $sql = "SELECT * FROM users WHERE email = '$email'";
   $query = mysqli_query($conn, $sql);
   
   if (!$query) {
-      // Query failed
+     
       die("Error: " . mysqli_error($conn));
   }
   

@@ -7,6 +7,7 @@
                 <ion-icon id="iconin" name="logo-snapchat"></ion-icon>
                 <ion-icon id="iconin" name="logo-whatsapp"></ion-icon>
             </div>
+            <p>&copy;all</p>
            
         </div>
 </footer>
