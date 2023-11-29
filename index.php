@@ -61,7 +61,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
       </form>
     </section>
-    <section>
-        
-    </section>
+    
     <?php include './tmp/script.php' ?>
