@@ -8,7 +8,7 @@ $description = isset($_POST['cate']) ? $_POST['cate'] : 'all';
 $filterSQL = ($description != 'all') ? " WHERE description = '$description'" : '';
 
 $sql = "SELECT titre, description, prix, prix_max, pri_min, quantité FROM product$filterSQL";
-$query = mysqli_query($conn, $sql);
+$query =  mysqli_query($conn, $sql);
 
 if (!$query) {
     die("Error: " . mysqli_error($conn));
@@ -37,8 +37,8 @@ while ($row = mysqli_fetch_assoc($query)) {
         </form>
         OUR PRODUCT
     </div>
-
-    <div class="card">
+<section>
+         <div class="card">
         <div class="row">
             <?php
             foreach ($products as $product) {
@@ -64,18 +64,23 @@ while ($row = mysqli_fetch_assoc($query)) {
                                     width="60%">
                             </div>
                             <div>
-                                <p style="position: relative;width: 147px;left: 12px;margin-top: 0;margin-bottom: 1rem;font-family: cursive; ">Lorem ipsum dolor sit amet.</p>
+                                <p
+                                    style="position: relative;width: 147px;left: 12px;margin-top: 0;margin-bottom: 1rem;font-family: cursive; ">
+                                    Lorem ipsum dolor sit amet.</p>
                             </div>
                         </div>
                         <br>
                         <div
                             style="display: flex;justify-content: space-between;align-items: center;margin-top: 10px;  margin-bottom: 10px;">
 
-<h3 style="color:blue; font-size:20px; font-size:bold;"></h3>Prix Max: <?= $product['prix_max'] . '$' ?></h3>
+                            <h3 style="color:blue; font-size:20px; font-size:bold;"></h3>Prix Max:
+                            <?= $product['prix_max'] . '$' ?></h3>
 
-                            <h3 style="color:blue; font-size:20px; font-size:bold;">Prix Min: <?= $product['pri_min'] . '$' ?></h3>
-                            
-                            <h3 style="color:blue; font-size:20px; font-size:bold;">Quantité: <?= $product['quantité'] . '$' ?></h3>
+                            <h3 style="color:blue; font-size:20px; font-size:bold;">Prix Min:
+                                <?= $product['pri_min'] . '$' ?></h3>
+
+                            <h3 style="color:blue; font-size:20px; font-size:bold;">Quantité:
+                                <?= $product['quantité'] . '$' ?></h3>
                         </div>
 
                         <button class="btn btn-danger">Add to cart</button>
